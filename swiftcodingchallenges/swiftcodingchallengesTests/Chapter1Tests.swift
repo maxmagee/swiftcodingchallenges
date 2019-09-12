@@ -24,4 +24,10 @@ class Chapter1Tests: XCTestCase {
         super.tearDown()
     }
 
+    func testChallenge1() {
+        XCTAssertTrue(chapter1.challenge1(input: "No duplicates"))
+        XCTAssertTrue(chapter1.challenge1(input: "abcdefghijklmnopqrstuvwxyz"))
+        XCTAssertTrue(chapter1.challenge1(input: "AaBbCc"))
+        XCTAssertFalse(chapter1.challenge1(input: "Hello, world"))
+    }
 }

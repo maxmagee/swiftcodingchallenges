@@ -8,6 +8,14 @@
 
 import Foundation
 
+// Strings
 class Chapter1 {
     
+    /// Write a function that accepts a String as its only parameter, and returns true if the string has only unique letters, taking letter case into account.
+    ///
+    /// - Parameter input: A string of letters to examine for uniqueness
+    /// - Returns: True if the string contains only unique letters
+    func challenge1(input: String) -> Bool {
+        return Set(input).count == input.count
+    }
 }
