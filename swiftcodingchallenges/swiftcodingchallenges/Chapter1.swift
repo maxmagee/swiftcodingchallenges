@@ -47,6 +47,24 @@ class Chapter1 {
         return input.filter{ $0 == letter }.count
     }
     
+    /// Write a function that accepts a String as its input, and returns the same string just with duplicate letters removed.
+    ///
+    /// - Parameter input: The starting string containing possibly duplicated letters
+    /// - Returns: A new string with the duplicate letters removed
+    func challenge6(input: String) -> String {
+        var lettersFound: Set<Character> = Set()
+        var returnString = ""
+        
+        for char in input {
+            if !lettersFound.contains(char) {
+                returnString.append(char)
+                lettersFound.insert(char)
+            }
+        }
+        
+        return returnString
+    }
+    
 }
 
 extension String {

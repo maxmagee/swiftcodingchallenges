@@ -59,4 +59,10 @@ class Chapter1Tests: XCTestCase {
         XCTAssertEqual(chapter1.challenge5(input: "Mississippi", letter: "i"), 4)
         XCTAssertEqual(chapter1.challenge5(input: "Hacking with Swift", letter: "i"), 3)
     }
+    
+    func testChallenge6() {
+        XCTAssertEqual(chapter1.challenge6(input: "wombat"), "wombat")
+        XCTAssertEqual(chapter1.challenge6(input: "hello"), "helo")
+        XCTAssertEqual(chapter1.challenge6(input: "Mississippi"), "Misp")
+    }
 }
