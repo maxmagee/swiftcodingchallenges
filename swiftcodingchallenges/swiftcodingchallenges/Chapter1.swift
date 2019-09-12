@@ -87,6 +87,34 @@ class Chapter1 {
         return doubledString.contains(inputB)
     }
     
+    /// Write a function that returns true if given a string that is an English pangram, ignoring letter case.
+    ///
+    /// - Parameter input: Check if this string is an English pangram
+    /// - Returns: True if the input is an English pangram
+    func challenge9(input: String) -> Bool {
+        let alphabet = "abcdefghijklmnopqrstuvwxyz"
+        let lowercaseInput = input.lowercased()
+        
+        for letter in alphabet {
+            if !lowercaseInput.contains(letter) {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
+    
+    /// A different approach to challenge 9. This is probably more efficient for longer strings
+    ///
+    /// - Parameter input: The input string to check against
+    /// - Returns: True if the input is an English pangram
+    func challenge9b(input: String) -> Bool {
+        let set = Set(input.lowercased())
+        let letters = set.filter { $0 >= "a" && $0 <= "z" }
+        return letters.count == 26
+    }
+    
 }
 
 extension String {

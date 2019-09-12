@@ -78,4 +78,14 @@ class Chapter1Tests: XCTestCase {
         XCTAssertFalse(chapter1.challenge8(inputA: "abcde", inputB: "abced"))
         XCTAssertFalse(chapter1.challenge8(inputA: "abc", inputB: "a"))
     }
+    
+    func testChallenge9() {
+        XCTAssertTrue(chapter1.challenge9(input: "The quick brown fox jumps over the lazy dog"))
+        XCTAssertFalse(chapter1.challenge9(input: "The quick brown fox jumped over the lazy dog"))
+    }
+    
+    func testChallenge9b() {
+        XCTAssertTrue(chapter1.challenge9b(input: "The quick brown fox jumps over the lazy dog"))
+        XCTAssertFalse(chapter1.challenge9b(input: "The quick brown fox jumped over the lazy dog"))
+    }
 }
