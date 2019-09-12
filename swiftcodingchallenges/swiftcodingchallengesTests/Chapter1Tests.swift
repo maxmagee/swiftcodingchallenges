@@ -88,4 +88,24 @@ class Chapter1Tests: XCTestCase {
         XCTAssertTrue(chapter1.challenge9b(input: "The quick brown fox jumps over the lazy dog"))
         XCTAssertFalse(chapter1.challenge9b(input: "The quick brown fox jumped over the lazy dog"))
     }
+    
+    func testChallenge10() {
+        let testA = chapter1.challenge10(input: "Swift Coding Challenges")
+        XCTAssertEqual(testA.consonants, 15)
+        XCTAssertEqual(testA.vowels, 6)
+        
+        let testB = chapter1.challenge10(input: "Mississippi")
+        XCTAssertEqual(testB.consonants, 7)
+        XCTAssertEqual(testB.vowels, 4)
+    }
+    
+    func testChallenge10b() {
+        let testA = chapter1.challenge10b(input: "Swift Coding Challenges")
+        XCTAssertEqual(testA.consonants, 15)
+        XCTAssertEqual(testA.vowels, 6)
+        
+        let testB = chapter1.challenge10b(input: "Mississippi")
+        XCTAssertEqual(testB.consonants, 7)
+        XCTAssertEqual(testB.vowels, 4)
+    }
 }

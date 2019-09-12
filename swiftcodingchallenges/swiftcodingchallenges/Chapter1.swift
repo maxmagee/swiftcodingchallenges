@@ -115,6 +115,42 @@ class Chapter1 {
         return letters.count == 26
     }
     
+    /// Given a string in English, return a tuple containing the number of vowels and consonants
+    ///
+    /// - Parameter input: A string in English
+    /// - Returns: A tuple containing the number of consonants and vowels in the input string
+    func challenge10(input: String) -> (consonants: Int, vowels: Int) {
+        let consontantCharacters = Set("bdcdfghjklmnpqrstvwxyz")
+        let vowelCharacters = Set("aeiou")
+        
+        let consonantCount = input.lowercased().filter { consontantCharacters.contains($0) }.count
+        let vowelCount = input.lowercased().filter { vowelCharacters.contains($0) }.count
+        
+        return (consonants: consonantCount, vowels: vowelCount)
+    }
+    
+    
+    /// A different approach to challenge 10. This is probably more efficient for longer strings
+    ///
+    /// - Parameter input: A string in English
+    /// - Returns: A tuple containing the number of consonants and vowels in the input string
+    func challenge10b(input: String) -> (consonants: Int, vowels: Int) {
+        let consontantCharacters = Set("bdcdfghjklmnpqrstvwxyz")
+        let vowelCharacters = Set("aeiou")
+        var consonantCount = 0
+        var vowelCount = 0
+        
+        for letter in input.lowercased() {
+            if consontantCharacters.contains(letter) {
+                consonantCount += 1
+            } else if vowelCharacters.contains(letter) {
+                vowelCount += 1
+            }
+        }
+        
+        return (consonants: consonantCount, vowels: vowelCount)
+    }
+    
 }
 
 extension String {
