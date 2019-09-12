@@ -65,6 +65,14 @@ class Chapter1 {
         return returnString
     }
     
+    /// Write a function that returns a string with any consecutive spaces replaced with a single space
+    ///
+    /// - Parameter input: The input string that may contain consecutive spaces
+    /// - Returns: A string with consecutive spaces replaced with a single space
+    func challenge7(input: String) -> String {
+        return input.replacingOccurrences(of: " +", with: " ", options: .regularExpression)
+    }
+    
 }
 
 extension String {
