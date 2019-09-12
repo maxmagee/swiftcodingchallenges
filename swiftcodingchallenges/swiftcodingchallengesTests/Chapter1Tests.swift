@@ -30,4 +30,11 @@ class Chapter1Tests: XCTestCase {
         XCTAssertTrue(chapter1.challenge1(input: "AaBbCc"))
         XCTAssertFalse(chapter1.challenge1(input: "Hello, world"))
     }
+    
+    func testChallenge2() {
+        XCTAssertTrue(chapter1.challenge2(input: "rotator"))
+        XCTAssertTrue(chapter1.challenge2(input: "Rats live on no evil star"))
+        XCTAssertFalse(chapter1.challenge2(input: "Never odd or even"))
+        XCTAssertFalse(chapter1.challenge2(input: "Hello, world"))
+    }
 }
