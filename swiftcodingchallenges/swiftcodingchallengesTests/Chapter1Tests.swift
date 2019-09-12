@@ -53,4 +53,10 @@ class Chapter1Tests: XCTestCase {
         XCTAssertTrue("Hello, world".challenge4(contains: "WORLD"))
         XCTAssertFalse("Hello, world".challenge4(contains: "Goodbye"))
     }
+    
+    func testChallenge5() {
+        XCTAssertEqual(chapter1.challenge5(input: "The rain in Spain", letter: "a"), 2)
+        XCTAssertEqual(chapter1.challenge5(input: "Mississippi", letter: "i"), 4)
+        XCTAssertEqual(chapter1.challenge5(input: "Hacking with Swift", letter: "i"), 3)
+    }
 }

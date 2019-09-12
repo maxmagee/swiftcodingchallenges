@@ -37,6 +37,16 @@ class Chapter1 {
         return inputA.sorted() == inputB.sorted()
     }
     
+    /// Write a function that accepts a String, and returns how many times a specific character appears, taking case into account.
+    ///
+    /// - Parameters:
+    ///   - input: The input string to search against
+    ///   - letter: The character to look for within the string
+    /// - Returns: How many times the given character appears in the string
+    func challenge5(input: String, letter: Character) -> Int {
+        return input.filter{ $0 == letter }.count
+    }
+    
 }
 
 extension String {
