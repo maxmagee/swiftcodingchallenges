@@ -47,4 +47,10 @@ class Chapter1Tests: XCTestCase {
         XCTAssertFalse(chapter1.challenge3(inputA: "abc", inputB: "cbAa"))
         XCTAssertFalse(chapter1.challenge3(inputA: "abcc", inputB: "abca"))
     }
+    
+    func testChallenge4() {
+        XCTAssertTrue("Hello, world".challenge4(contains: "Hello"))
+        XCTAssertTrue("Hello, world".challenge4(contains: "WORLD"))
+        XCTAssertFalse("Hello, world".challenge4(contains: "Goodbye"))
+    }
 }

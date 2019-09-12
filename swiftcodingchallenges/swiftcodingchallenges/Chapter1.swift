@@ -36,4 +36,16 @@ class Chapter1 {
     func challenge3(inputA: String, inputB: String) -> Bool {
         return inputA.sorted() == inputB.sorted()
     }
+    
+}
+
+extension String {
+    
+    /// Write your own version of the contains() method on String that ignores letter case, and without using the existing contains() method.
+    ///
+    /// - Parameter contains: The string to search for
+    /// - Returns: True if the string contains the input parameter
+    func challenge4(contains: String) -> Bool {
+        return self.range(of: contains, options: .caseInsensitive) != nil
+    }
 }
