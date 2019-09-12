@@ -37,4 +37,14 @@ class Chapter1Tests: XCTestCase {
         XCTAssertFalse(chapter1.challenge2(input: "Never odd or even"))
         XCTAssertFalse(chapter1.challenge2(input: "Hello, world"))
     }
+    
+    func testChallenge3() {
+        XCTAssertTrue(chapter1.challenge3(inputA: "abca", inputB: "abca"))
+        XCTAssertTrue(chapter1.challenge3(inputA: "abc", inputB: "cba"))
+        XCTAssertTrue(chapter1.challenge3(inputA: "a1 b2", inputB: "b1 a2"))
+        XCTAssertFalse(chapter1.challenge3(inputA: "abc", inputB: "abca"))
+        XCTAssertFalse(chapter1.challenge3(inputA: "abc", inputB: "Abc"))
+        XCTAssertFalse(chapter1.challenge3(inputA: "abc", inputB: "cbAa"))
+        XCTAssertFalse(chapter1.challenge3(inputA: "abcc", inputB: "abca"))
+    }
 }

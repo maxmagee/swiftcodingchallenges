@@ -26,4 +26,14 @@ class Chapter1 {
     func challenge2(input: String) -> Bool {
         return input.lowercased() == String(input.lowercased().reversed())
     }
+    
+    /// Write a function that accepts two String parameters, and returns true if they contain the same characters in any order taking into account letter case.
+    ///
+    /// - Parameters:
+    ///   - inputA: The first string to use in the comparison
+    ///   - inputB: The second string to use in the comparison
+    /// - Returns: True if the strings contain the same case-sensitive letters
+    func challenge3(inputA: String, inputB: String) -> Bool {
+        return inputA.sorted() == inputB.sorted()
+    }
 }
