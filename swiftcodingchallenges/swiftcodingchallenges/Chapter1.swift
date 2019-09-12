@@ -73,6 +73,20 @@ class Chapter1 {
         return input.replacingOccurrences(of: " +", with: " ", options: .regularExpression)
     }
     
+    /// Write a function that accepts two strings, and returns true if one string is a rotation of the other, taking letter case into account.
+    ///
+    /// - Parameters:
+    ///   - inputA: The first string to use in the rotation comparison
+    ///   - inputB: The second string to use in the rotation comparison
+    /// - Returns: True if inputB is a rotation of inputA
+    func challenge8(inputA: String, inputB: String) -> Bool {
+        guard inputA.count == inputB.count else { return false }
+        
+        let doubledString = inputA + inputA
+        
+        return doubledString.contains(inputB)
+    }
+    
 }
 
 extension String {
