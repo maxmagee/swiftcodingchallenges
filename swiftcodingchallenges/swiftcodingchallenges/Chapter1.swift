@@ -175,6 +175,28 @@ class Chapter1 {
         return true
     }
     
+    /// Write a function that accepts a string of words with a similar prefix, separated by spaces, and returns the longest substring that prefixes all words
+    ///
+    /// - Parameter input: A string of space-separated words
+    /// - Returns: The longest prefix shared by all words in the input string
+    func challenge12(input: String) -> String {
+        let words = input.components(separatedBy: " ")
+        let firstWord = Array(words[0])
+        var longestPrefix = ""
+        
+        for index in 0..<firstWord.count {
+            // Count all of the words that satisfy the prefix filter
+            let wordCountWithPrefix = words.filter { $0.hasPrefix(longestPrefix + String(firstWord[index])) }.count
+            if words.count == wordCountWithPrefix {
+                longestPrefix += String(firstWord[index])
+            } else {
+                return longestPrefix
+            }
+        }
+        
+        return longestPrefix
+    }
+    
 }
 
 extension String {

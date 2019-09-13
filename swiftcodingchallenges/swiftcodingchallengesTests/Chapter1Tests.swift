@@ -117,4 +117,9 @@ class Chapter1Tests: XCTestCase {
         XCTAssertFalse(chapter1.challenge11(inputA: "Clamp", inputB: "Clam"))
         XCTAssertFalse(chapter1.challenge11(inputA: "clamp", inputB: "maple"))
     }
+    
+    func testChallenge12() {
+        XCTAssertEqual(chapter1.challenge12(input: "swift switch swill swim"), "swi")
+        XCTAssertEqual(chapter1.challenge12(input: "flip flap flop"), "fl")
+    }
 }
