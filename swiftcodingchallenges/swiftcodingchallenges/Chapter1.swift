@@ -197,6 +197,37 @@ class Chapter1 {
         return longestPrefix
     }
     
+    /// Write a function that accepts a string as input, then returns how often each letter is repeated in a single run, taking case into account
+    ///
+    /// - Parameter input: The input string to encode
+    /// - Returns: The encoded string
+    func challenge13(input: String) -> String {
+        var currentLetter: Character!
+        var currentCount = 0
+        var encodedString = ""
+        
+        for letter in input {
+            if currentLetter == nil {
+                currentLetter = letter
+                currentCount += 1
+            } else {
+                if letter == currentLetter {
+                    currentCount += 1
+                } else {
+                    encodedString += String(currentLetter)
+                    encodedString += String(currentCount)
+                    currentLetter = letter
+                    currentCount = 1
+                }
+            }
+        }
+        
+        encodedString += String(currentLetter)
+        encodedString += String(currentCount)
+        
+        return encodedString
+    }
+    
 }
 
 extension String {
