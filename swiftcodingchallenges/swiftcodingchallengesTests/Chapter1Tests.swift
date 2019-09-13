@@ -128,4 +128,9 @@ class Chapter1Tests: XCTestCase {
         XCTAssertEqual(chapter1.challenge13(input: "aaabaaabaaa"), "a3b1a3b1a3")
         XCTAssertEqual(chapter1.challenge13(input: "aaAAaa"), "a2A2a2")
     }
+    
+    func testChallenge15() {
+        XCTAssertEqual(chapter1.challenge15(input: "Swift Coding Challenges"), "tfiwS gnidoC segnellahC")
+        XCTAssertEqual(chapter1.challenge15(input: "The quick brown fox"), "ehT kciuq nworb xof")
+    }
 }

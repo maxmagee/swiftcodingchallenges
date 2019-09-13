@@ -228,6 +228,16 @@ class Chapter1 {
         return encodedString
     }
     
+    /// Write a function that returns a string with each of its words reversed but in the original order without using a loop.
+    ///
+    /// - Parameter input: The original string to modify
+    /// - Returns: A string with each word reversed
+    func challenge15(input: String) -> String {
+        return input.components(separatedBy: " ")
+            .map { String($0.reversed()) }
+            .joined(separator: " ")
+    }
+    
 }
 
 extension String {
