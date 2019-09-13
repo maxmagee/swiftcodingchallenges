@@ -108,4 +108,13 @@ class Chapter1Tests: XCTestCase {
         XCTAssertEqual(testB.consonants, 7)
         XCTAssertEqual(testB.vowels, 4)
     }
+    
+    func testChallenge11() {
+        XCTAssertTrue(chapter1.challenge11(inputA: "Clamp", inputB: "Cramp"))
+        XCTAssertTrue(chapter1.challenge11(inputA: "Clamp", inputB: "Crams"))
+        XCTAssertTrue(chapter1.challenge11(inputA: "Clamp", inputB: "Grams"))
+        XCTAssertFalse(chapter1.challenge11(inputA: "Clamp", inputB: "Grans"))
+        XCTAssertFalse(chapter1.challenge11(inputA: "Clamp", inputB: "Clam"))
+        XCTAssertFalse(chapter1.challenge11(inputA: "clamp", inputB: "maple"))
+    }
 }

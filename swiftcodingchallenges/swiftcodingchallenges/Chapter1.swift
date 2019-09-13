@@ -151,6 +151,30 @@ class Chapter1 {
         return (consonants: consonantCount, vowels: vowelCount)
     }
     
+    /// Write a function that accepts two strings, and returns true if they are identical in length, but have no more than three different letters, taking case and string order into account
+    ///
+    /// - Parameters:
+    ///   - inputA: The first string to use in the comparison
+    ///   - inputB: The second string to use in the comparison
+    /// - Returns: True if there are no more than 3 different letters between the two strings
+    func challenge11(inputA: String, inputB: String) -> Bool {
+        guard inputA.count == inputB.count else { return false }
+        
+        let arrayB = Array(inputB)
+        var differenceCount = 0
+        
+        for (index, letter) in inputA.enumerated() {
+            if arrayB[index] != letter {
+                differenceCount += 1
+            }
+            if differenceCount > 3 {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
 }
 
 extension String {
