@@ -21,5 +21,10 @@ class Chapter2Tests: XCTestCase {
         chapter2 = nil
         super.tearDown()
     }
+    
+    func testChallenge16() {
+        // chapter2.challenge16()       // uncomment this line to run
+        XCTAssertTrue(true)
+    }
 
 }
