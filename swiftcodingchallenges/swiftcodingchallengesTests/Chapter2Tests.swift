@@ -27,4 +27,12 @@ class Chapter2Tests: XCTestCase {
         XCTAssertTrue(true)
     }
 
+    func testChallenge17() {
+        let test1 = chapter2.challenge17(min: 1, max: 10)
+        let test2 = chapter2.challenge17(min: 5, max: 5)
+        
+        XCTAssertTrue(test1 >= 1)
+        XCTAssertTrue(test1 <= 10)
+        XCTAssertTrue(test2 == 5)
+    }
 }

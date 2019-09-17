@@ -25,4 +25,14 @@ class Chapter2 {
             }
         }
     }
+    
+    /// Write a function that accepts positive minimum and maximum integers, and returns a random number between those two bounds, inclusive
+    ///
+    /// - Parameters:
+    ///   - min: A positive minimum integer bound
+    ///   - max: A positive maximum integer bound
+    /// - Returns: An integer between the minimum and maximum bound
+    func challenge17(min: Int, max: Int) -> Int {
+        return Int.random(in: min...max)
+    }
 }
