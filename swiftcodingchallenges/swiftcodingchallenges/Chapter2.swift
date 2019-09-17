@@ -35,4 +35,23 @@ class Chapter2 {
     func challenge17(min: Int, max: Int) -> Int {
         return Int.random(in: min...max)
     }
+    
+    /// Create a function that accepts two positive integers, and raises the first to the power of the second (without using the built-in pow() function
+    ///
+    /// - Parameters:
+    ///   - num: The number to raise
+    ///   - power: The power to raise the number to
+    /// - Returns: An integer result of the number raised to the power provided
+    func challenge18(num: Int, power: Int) -> Int {
+        guard num >= 0 && power >= 0 else { return 0 }
+        if power == 0 { return 1 }
+        
+        var result = num
+        
+        for _ in 1..<power {
+            result *= num
+        }
+        
+        return result
+    }
 }

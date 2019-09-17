@@ -35,4 +35,9 @@ class Chapter2Tests: XCTestCase {
         XCTAssertTrue(test1 <= 10)
         XCTAssertTrue(test2 == 5)
     }
+    
+    func testChallenge18() {
+        XCTAssertEqual(chapter2.challenge18(num: 4, power: 3), 64)
+        XCTAssertEqual(chapter2.challenge18(num: 2, power: 8), 256)
+    }
 }
