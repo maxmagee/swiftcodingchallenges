@@ -88,4 +88,9 @@ class Chapter2Tests: XCTestCase {
         XCTAssertEqual(chapter2.challenge24(input: "a10b20c30"), 60)
         XCTAssertEqual(chapter2.challenge24(input: "h8ers"), 8)
     }
+    
+    func testChallenge26() {
+        XCTAssertEqual(chapter2.challenge26(subtract: 5, from: 9), 4)
+        XCTAssertEqual(chapter2.challenge26(subtract: 10, from: 30), 20)
+    }
 }

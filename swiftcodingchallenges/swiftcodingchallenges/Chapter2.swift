@@ -175,4 +175,14 @@ class Chapter2 {
         
         return currentSum
     }
+    
+    /// Create a function that subtracts one positive integer from another, without using -.
+    ///
+    /// - Parameters:
+    ///   - subtract: The number to remove from the other number
+    ///   - from: The number to remove from
+    /// - Returns: The result of the subtraction
+    func challenge26(subtract: Int, from: Int) -> Int {
+        return -1 * subtract + from
+    }
 }
