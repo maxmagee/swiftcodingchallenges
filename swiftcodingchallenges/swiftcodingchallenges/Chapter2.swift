@@ -60,7 +60,7 @@ class Chapter2 {
     /// - Parameters:
     ///   - a: The first integer
     ///   - b: The second integer
-    func challenge19( a: inout Int, b: inout Int) {
+    func challenge19(a: inout Int, b: inout Int) {
         // a: 3, b: 2
         // a = a + b // a: 5, b: 2
         // b = a - b // b: 3
@@ -68,5 +68,24 @@ class Chapter2 {
         a = a + b
         b = a - b
         a = a - b
+    }
+    
+    /// Write a function that accepts an integer as its parameter and returns true if the number is prime
+    ///
+    /// - Parameter number: A positive integer greater than 1
+    /// - Returns: True if the number is prime
+    func challenge20(number: Int) -> Bool {
+        guard number >= 2 else { return false }
+        guard number != 2 else { return true }
+        
+        let upperBound = Int(ceil(sqrt(Double(number))))
+        
+        for i in 2...upperBound {
+            if number % i == 0 {
+                return false
+            }
+        }
+        
+        return true
     }
 }

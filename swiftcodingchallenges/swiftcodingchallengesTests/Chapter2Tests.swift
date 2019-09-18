@@ -50,4 +50,12 @@ class Chapter2Tests: XCTestCase {
         XCTAssertEqual(a, 2)
         XCTAssertEqual(b, 1)
     }
+    
+    func testChallenge20() {
+        XCTAssertTrue(chapter2.challenge20(number: 11))
+        XCTAssertTrue(chapter2.challenge20(number: 13))
+        XCTAssertFalse(chapter2.challenge20(number: 4))
+        XCTAssertFalse(chapter2.challenge20(number: 9))
+        XCTAssertTrue(chapter2.challenge20(number: 16777259))
+    }
 }
