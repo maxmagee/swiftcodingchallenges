@@ -40,4 +40,14 @@ class Chapter2Tests: XCTestCase {
         XCTAssertEqual(chapter2.challenge18(num: 4, power: 3), 64)
         XCTAssertEqual(chapter2.challenge18(num: 2, power: 8), 256)
     }
+    
+    func testChallenge19() {
+        var a = 1
+        var b = 2
+        
+        chapter2.challenge19(a: &a, b: &b)
+        
+        XCTAssertEqual(a, 2)
+        XCTAssertEqual(b, 1)
+    }
 }

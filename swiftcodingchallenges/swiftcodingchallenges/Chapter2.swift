@@ -54,4 +54,19 @@ class Chapter2 {
         
         return result
     }
+    
+    /// Swap two positive variable integers, a and b, without using a temporary variable
+    ///
+    /// - Parameters:
+    ///   - a: The first integer
+    ///   - b: The second integer
+    func challenge19( a: inout Int, b: inout Int) {
+        // a: 3, b: 2
+        // a = a + b // a: 5, b: 2
+        // b = a - b // b: 3
+        // a = a - b // a: 2, b, 3
+        a = a + b
+        b = a - b
+        a = a - b
+    }
 }
