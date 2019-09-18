@@ -137,4 +137,14 @@ class Chapter2 {
         
         return UInt8(String(paddedBinaryInput.reversed()), radix: 2)!
     }
+    
+    /// Write a function that accepts a string a returns true if it contains only numbers, i.e. the digits 0 through 9
+    ///
+    /// - Parameter input: The string to check for only digits
+    /// - Returns: True if the input contains only the numbers 0 - 9
+    func challenge23(input: String) -> Bool {
+        let filteredInput = input.filter("0123456789".contains)
+        
+        return filteredInput.count == input.count
+    }
 }
