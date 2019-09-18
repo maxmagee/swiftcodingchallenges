@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7B050C0E232B33E60064015B /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B050C0D232B33E60064015B /* Chapter2.swift */; };
 		7B050C10232B33F50064015B /* Chapter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B050C0F232B33F50064015B /* Chapter2Tests.swift */; };
+		7B6AB7E62331D9430050F328 /* Chapter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AB7E52331D9430050F328 /* Chapter3.swift */; };
+		7B6AB7E82331D9510050F328 /* Chapter3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AB7E72331D9510050F328 /* Chapter3Tests.swift */; };
 		7BA9D1A92329CE2400B6E48C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA9D1A82329CE2400B6E48C /* AppDelegate.swift */; };
 		7BA9D1AB2329CE2400B6E48C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA9D1AA2329CE2400B6E48C /* ViewController.swift */; };
 		7BA9D1AE2329CE2400B6E48C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA9D1AC2329CE2400B6E48C /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		7B050C0D232B33E60064015B /* Chapter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		7B050C0F232B33F50064015B /* Chapter2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2Tests.swift; sourceTree = "<group>"; };
+		7B6AB7E52331D9430050F328 /* Chapter3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter3.swift; sourceTree = "<group>"; };
+		7B6AB7E72331D9510050F328 /* Chapter3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter3Tests.swift; sourceTree = "<group>"; };
 		7BA9D1A52329CE2400B6E48C /* swiftcodingchallenges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftcodingchallenges.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA9D1A82329CE2400B6E48C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BA9D1AA2329CE2400B6E48C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				7BA9D1B42329CE2600B6E48C /* Info.plist */,
 				7BA9D1C82329CE7700B6E48C /* Chapter1.swift */,
 				7B050C0D232B33E60064015B /* Chapter2.swift */,
+				7B6AB7E52331D9430050F328 /* Chapter3.swift */,
 			);
 			path = swiftcodingchallenges;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 			children = (
 				7BA9D1C02329CE4B00B6E48C /* Chapter1Tests.swift */,
 				7B050C0F232B33F50064015B /* Chapter2Tests.swift */,
+				7B6AB7E72331D9510050F328 /* Chapter3Tests.swift */,
 				7BA9D1C22329CE4B00B6E48C /* Info.plist */,
 			);
 			path = swiftcodingchallengesTests;
@@ -207,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BA9D1AB2329CE2400B6E48C /* ViewController.swift in Sources */,
+				7B6AB7E62331D9430050F328 /* Chapter3.swift in Sources */,
 				7BA9D1A92329CE2400B6E48C /* AppDelegate.swift in Sources */,
 				7B050C0E232B33E60064015B /* Chapter2.swift in Sources */,
 				7BA9D1C92329CE7700B6E48C /* Chapter1.swift in Sources */,
@@ -218,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B050C10232B33F50064015B /* Chapter2Tests.swift in Sources */,
+				7B6AB7E82331D9510050F328 /* Chapter3Tests.swift in Sources */,
 				7BA9D1C12329CE4B00B6E48C /* Chapter1Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
