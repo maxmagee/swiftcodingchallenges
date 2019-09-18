@@ -147,4 +147,32 @@ class Chapter2 {
         
         return filteredInput.count == input.count
     }
+    
+    /// Given a string that contains both letters and numbers, write a function that pulls out all the numbers then returns their sum
+    ///
+    /// - Parameter input: A string containing letters and numbers
+    /// - Returns: The sum of the numbers contained within the string
+    func challenge24(input: String) -> Int {
+        var currentNumber = ""
+        var currentSum = 0
+        let digits = CharacterSet(charactersIn: "0123456789")
+        
+        for char in input {
+            if CharacterSet(charactersIn: String(char)).isSubset(of: digits) {
+                currentNumber += String(char)
+            } else {
+                if currentNumber != "" {
+                    currentSum += Int(currentNumber)!
+                    currentNumber = ""
+                }
+            }
+        }
+        
+        if currentNumber != "" {
+            currentSum += Int(currentNumber)!
+            currentNumber = ""
+        }
+        
+        return currentSum
+    }
 }

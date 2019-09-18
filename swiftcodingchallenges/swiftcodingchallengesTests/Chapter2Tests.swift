@@ -82,4 +82,10 @@ class Chapter2Tests: XCTestCase {
         XCTAssertTrue(chapter2.challenge23(input: "9223372036854775808"))
         XCTAssertFalse(chapter2.challenge23(input: "1.01"))
     }
+    
+    func testChallenge24() {
+        XCTAssertEqual(chapter2.challenge24(input: "a1b2c3"), 6)
+        XCTAssertEqual(chapter2.challenge24(input: "a10b20c30"), 60)
+        XCTAssertEqual(chapter2.challenge24(input: "h8ers"), 8)
+    }
 }
