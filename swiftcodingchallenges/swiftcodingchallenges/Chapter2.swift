@@ -126,4 +126,15 @@ class Chapter2 {
         
         return binaryString.filter { $0 == "1" }.count
     }
+    
+    /// Create a function that accepts an unsigned 8-bit integer and returns its binary reverse, padded so that it holds precisely eight binary digits
+    ///
+    /// - Parameter input: The input number to reverse
+    /// - Returns: The reversed result 8-bit unsigned int
+    func challenge22(input: UInt8) -> UInt8 {
+        let binaryInput = String(input, radix: 2)
+        let paddedBinaryInput = String(repeating: "0", count: 8 - binaryInput.count) + binaryInput
+        
+        return UInt8(String(paddedBinaryInput.reversed()), radix: 2)!
+    }
 }

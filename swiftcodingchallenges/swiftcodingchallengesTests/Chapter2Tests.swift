@@ -68,4 +68,11 @@ class Chapter2Tests: XCTestCase {
         XCTAssertEqual(test2.nextLowest, 26)
         XCTAssertEqual(test2.nextHighest, 35)
     }
+    
+    func testChallenge22() {
+        XCTAssertEqual(chapter2.challenge22(input: 32), 4)
+        XCTAssertEqual(chapter2.challenge22(input: 4), 32)
+        XCTAssertEqual(chapter2.challenge22(input: 41), 148)
+        XCTAssertEqual(chapter2.challenge22(input: 148), 41)
+    }
 }
