@@ -58,4 +58,14 @@ class Chapter2Tests: XCTestCase {
         XCTAssertFalse(chapter2.challenge20(number: 9))
         XCTAssertTrue(chapter2.challenge20(number: 16777259))
     }
+    
+    func testChallenge21() {
+        let test1 = chapter2.challenge21(number: 12)
+        let test2 = chapter2.challenge21(number: 28)
+        
+        XCTAssertEqual(test1.nextLowest, 10)
+        XCTAssertEqual(test1.nextHighest, 17)
+        XCTAssertEqual(test2.nextLowest, 26)
+        XCTAssertEqual(test2.nextHighest, 35)
+    }
 }

@@ -88,4 +88,42 @@ class Chapter2 {
         
         return true
     }
+    
+    /// Create a function that accepts any positive integer and returns the next highest and next lowest number that has the same number of ones in its binary representation. If either is not possible, return nil for it.
+    ///
+    /// - Parameter number: The input base 10 integer
+    /// - Returns: A tuple containing the next highest and next lowest integers with the same number of 1s in their binary representation
+    func challenge21(number: Int) -> (nextLowest: Int?, nextHighest: Int?) {
+        let targetNumberOfOnes = getNumberOfOnesInBinaryRepresentation(of: number)
+        var nextLowest: Int?
+        var nextHighest: Int?
+        var nextHighestTemp = number
+        
+        for i in (1..<number).reversed() {
+            if getNumberOfOnesInBinaryRepresentation(of: i) == targetNumberOfOnes {
+                nextLowest = i
+                break
+            }
+        }
+        
+        while nextHighest == nil {
+            nextHighestTemp += 1
+            if getNumberOfOnesInBinaryRepresentation(of: nextHighestTemp) == targetNumberOfOnes {
+                nextHighest = nextHighestTemp
+            }
+        }
+        
+        return (nextLowest: nextLowest, nextHighest: nextHighest)
+    }
+    
+    
+    /// Returns the number of 1s in the binary representation of a base 10 integer
+    ///
+    /// - Parameter number: A base 10 integer
+    /// - Returns: The number of 1s in the binary representation of the input integer
+    private func getNumberOfOnesInBinaryRepresentation(of number: Int) -> Int {
+        let binaryString = String(number, radix: 2)
+        
+        return binaryString.filter { $0 == "1" }.count
+    }
 }
